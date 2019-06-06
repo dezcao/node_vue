@@ -59,3 +59,11 @@ git : 리눅스 상에서 가장 빠른 속도, 인터넷 연결이 없을 때�
 ### 프로그램 실행해 보기
 node index.js
 
+### 현재 진행정도
+```sh
+https://www.youtube.com/watch?v=aBMzgzcvwIA&list=PLEOnZ6GeucBX5H60GtICsoDs9LaFQVDPz&index=2
+여기부터 강의 보면되고,
+git, visual basic code 설치 후에
+git pull 하고나서 npm install 한방이면 된다.
+```
+
