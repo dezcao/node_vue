@@ -1,15 +1,20 @@
-1. 모듈을 제공하는 쪽은 export
+### 모듈을 제공하는 쪽은 export
     받는 쪽은 require로 받는다.
     node.js는 파일시스템에 관해서 기본제공하는 라이브러리가 포함되어 있다.
     그래서 별도 모듈 설치없이 바로 받겠다고 해주면 된다. require('fs');
 
-2. 그밖에 거의 필수적인 모듈들 설치해준다.
- <pre>npm i express (express-koa, 경량화 시켜준것도 있다.)
+### 그밖에 거의 필수적인 모듈들 설치해준다.
+
+```sh
+ npm i express (express-koa, 경량화 시켜준것도 있다.)
  npm i ejs
  npm i body-parser (리퀘스트의 파라미터 파싱용)
  npm i mysql
  npm i nodemon -g (개발중 자동 재시작 해줌.)
  npm i bluebird --save (connection pool, transaction, Kludgy)
+```
+
+ <pre>
  </pre>
  * 
  * 
