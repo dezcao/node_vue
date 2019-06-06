@@ -1,0 +1,29 @@
+{
+  "name": "nodevue",
+  "version": "0.0.0",
+  "description": "node and vue",
+  "main": "index.js",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.17.1",
+    "npm": "^6.9.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/dezcao/nodevue.git"
+  },
+  "keywords": [
+    "node",
+    "vue"
+  ],
+  "author": "dezcao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dezcao/nodevue/issues"
+  },
+  "homepage": "https://github.com/dezcao/nodevue#readme"
+}
