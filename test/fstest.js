@@ -32,7 +32,8 @@
  * cat .gitignore (무시할 파일을 만들어준다. window라면 cat 대신 type)
  * 
  * 
- * git remote add origin 깃주소
+ * git remote add origin 깃주소(https)
+ * git remote remove origin (잘못해서 지울때)
  * 
  * 
  * clone 해오기
