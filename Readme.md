@@ -59,6 +59,14 @@ git : 리눅스 상에서 가장 빠른 속도, 인터넷 연결이 없을 때�
 ### 프로그램 실행해 보기
 node index.js
 
+
+### visual studio code 단축키
+```sh
+멀티라인 선택 : ctrl + alt + 화살표 위, 아래 
+커서의 라인삭제 : ctrl + X
+```
+
+
 ### 현재 진행정도
 ```sh
 https://www.youtube.com/watch?v=aBMzgzcvwIA&list=PLEOnZ6GeucBX5H60GtICsoDs9LaFQVDPz&index=2
@@ -67,4 +75,3 @@ git, visual basic code 설치 후에
 git pull 하고나서 npm install 한방이면 된다.
 git clone https://github.com/dezcao/nodevue.git
 ```
-
