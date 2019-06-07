@@ -65,5 +65,6 @@ https://www.youtube.com/watch?v=aBMzgzcvwIA&list=PLEOnZ6GeucBX5H60GtICsoDs9LaFQV
 여기부터 강의 보면되고,
 git, visual basic code 설치 후에
 git pull 하고나서 npm install 한방이면 된다.
+git clone https://github.com/dezcao/nodevue.git
 ```
 
