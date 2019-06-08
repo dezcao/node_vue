@@ -151,6 +151,7 @@ Plug-in :
 ```
 
 ### css 번들
+```sh
 npm install node-sass style-loader css-loader sass-loader --save-dev
 
 webpack.config.js 파일을 아래와 같이 수정한다.
@@ -195,3 +196,4 @@ module.exports = {
   // https://webpack.js.org/concepts/mode/#mode-development
   mode: 'development'
 };
+```
