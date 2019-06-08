@@ -75,3 +75,28 @@ git, visual basic code 설치 후에
 git pull 하고나서 npm install 한방이면 된다.
 git clone https://github.com/dezcao/nodevue.git
 ```
+
+### 세팅순서
+visual studio code 설치 
+    https://code.visualstudio.com/docs/?dv=win
+
+
+visual studio code 세팅 변경
+    view > toggle render whitespace
+
+
+프로젝트 가져올 폴더 만들기
+
+git 설치
+    https://git-scm.com/download/win
+    git clone https://github.com/dezcao/nodevue.git
+    {{
+        git init
+        git config --global user.name dezcao
+        git config --global user.email dezcao@naver.com
+    }}
+
+node.js 설치
+    https://nodejs.org/ko/
+    커멘트창 다시 시작해야 한다.(노드가 나중에 설치되었기 때문)
+    npm install

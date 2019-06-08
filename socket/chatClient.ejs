@@ -1,0 +1,81 @@
+
+<input type="text" id="msg" value="hi~">
+<div id="m" class="red"></div>
+
+<!-- socket.io가 제공해준다. -->
+<script src="/socket.io/socket.io.js"></script>
+
+<!-- jquery 3.x IE8도 잘 돔 -->
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+
+<!-- 클라이언트가 소켓을 위해서 구현해 주어야 할 부분 -->
+<script>
+    var socket = io('http://localhost:7000');
+    let joinedRoom = null;
+    var square = 'square';
+
+    socket.on('connect', function(){
+        console.log('connected');
+        // 연결 후 자동 로그인 해보자.
+
+        // 방에 참여하자. 이벤트는 서버와 약속된 값을 쓰면 된다.
+        socket.emit('join', square);
+        joinedRoom = square;
+        console.log('now join room ', joinedRoom);
+
+        // 참여중인 방을 출력해보자.
+        socket.emit('rooms', function(rooms) {
+            console.log('my rooms ', rooms);
+        })
+    });
+
+    socket.on('message', function(data){
+        console.log(`message ${data}`);
+        let msg = data.msg;
+        if (msg && msg.startsWith('Welcome')) {
+            // chat.js 로부터 Welcome socket.id 이므로 소켓아이디 한번 뿌려보자.
+            // 기본적으로 소켓아이디로 자기 방을 하나씩 부여받는다. 귓속말을 여기에 하면 된다.
+            console.log(msg.substring(msg.lastIndexOf(' ') + 1))
+        }
+    });
+
+    socket.on('disconnect', function(){
+        console.log('disconnected!');
+    });
+
+    function send() {
+        let msg = $('#msg').val();
+        
+        socket.emit('message', {room: joinedRoom, msg: msg}, function(ret) {
+            // 서버에게 함수를 알려준다.
+            console.log(`message.collback ${ret}`);
+        });
+    }
+
+    //-----------------------------------------------------
+    function joinRoom() {
+        //let roomId = $(...).val();
+        if (!roomId) {
+            return;
+        }
+        makeJoin(roomId);
+    }
+
+    function displayRooms() {
+        socket.emit('rooms', (rooms) => {
+            console.log('my rooms display ', rooms);
+        });
+    }
+
+    function makeJoin(roomId) {
+        socket.emit('join', roomId,() => {
+            socket.emit('leave', joinedRoom);
+            joinedRoom = roomId;
+            displayRooms();
+        });
+    }
+    //------------------------------------------------
+</script>

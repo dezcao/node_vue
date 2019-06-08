@@ -21,6 +21,10 @@ app.get('/test/:email', (req, res) => {
     res.json(testJson);
 });
 
+app.get('/socket', (req, res) => {
+    
+});
+
 const server = app.listen(7000, function() {
     console.log("Express's started.... on port 7000");
 });
