@@ -197,3 +197,49 @@ module.exports = {
   mode: 'development'
 };
 ```
+
+### MVVM
+```sh
+Model View ViewModel Pattern
+View와 Controller의 결합이 너무 강함. 해소하고 싶어서 나옴.
+Model이 데이터를 다룸.
+View는 순수 화면
+ViewModel이 Dom Event를 받아들이고 조작한다. Model을 Observing 하다가 화면에 반영도 해준다.
+```
+
+### Vue.js
+```sh
+Progressive Javascript Framework : Ember(*굉장하다.), React, Vue 화면 처리를 포함하고 있다.
+SPA (Single Page Application) : 위와같이 페이지 리프레시 없이 처리해준다.
+vuatify.js가 IE9/IE10을 지원하지 않고 있다.
+
+Component : 기능별 분리
+Router : 페이지 전환
+Resource : 
+Template : html
+Life Cycle : 생명주기
+Option : template, el, method, created data, mounted, updated, destryoed, etc.
+
+IE9+ 부터 지원한다.
+
+npm i @vue/cli -g
+npm i @vue/cli-service-global -g
+vue --version
+
+크롬 디버그 툴 설치 (Chrome 웹 스토어)
+Vue.js devtools
+세부정보에서 파일 URL에 대한 엑세스 허용을 활성화 한다.
+
+node.js를 활용해 vue가 자체 서버를 띄워주기도 한다. 다음 설정 파일을 만든다 (소스 있는 곳에서).
+vue.config.js
+module.exports = {
+    devServer: {
+        port: 8700,
+        https: false
+    }
+}
+
+서버를 실행 시키고 브라우저까지 띄워준다.
+vue serve -o
+
+```
