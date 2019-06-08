@@ -57,8 +57,15 @@ io.sockets.on('connection', (socket, opt) => {
     });
     
     // 특정 소켓에 메시지
+    // data : {room : roomid, msg : '내용'}; 클라이언트와 약속된 키 room, msg 등 맘대로.
     socket.on('message', (data, fn) => {
         util.log('message >> ', data.msg, Object.keys(socket.rooms));
+
+        if (fn) {
+            fn(data.msg);
+        }
+        // emit(이벤트, 정보);
+        socket.broadcast.to(data.room).emit('message', {room: data.room, msg: data.msg});
     });
     
     // 소켓 끊기 roomId, fn 없을것.

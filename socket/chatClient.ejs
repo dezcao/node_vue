@@ -1,6 +1,7 @@
 
+<div id="msessageList"></div>
 <input type="text" id="msg" value="hi~">
-<div id="m" class="red"></div>
+<button id="send" onclick="send()">send</button>
 
 <!-- socket.io가 제공해준다. -->
 <script src="/socket.io/socket.io.js"></script>
@@ -32,10 +33,23 @@
         })
     });
 
+    // 메세지 보내기 emit, IE에서 수행하면 인식못함...
+    function send() {
+        let msg = $('#msg').val();
+        
+        socket.emit('message', {room: joinedRoom, msg: msg}, function(ret) {
+            // 서버에게 함수를 알려준다.
+            console.log(`message.collback ${ret}`);
+            $('#msessageList').append(`<div>나 : ${msg}</div>`);
+        });
+    }
+
+    // 메시지 받은것
     socket.on('message', function(data){
         console.log(`message ${data}`);
         let msg = data.msg;
-        if (msg && msg.startsWith('Welcome')) {
+        if (msg) {
+            $('#msessageList').append(`<div> : ${msg}</div>`);
             // chat.js 로부터 Welcome socket.id 이므로 소켓아이디 한번 뿌려보자.
             // 기본적으로 소켓아이디로 자기 방을 하나씩 부여받는다. 귓속말을 여기에 하면 된다.
             console.log(msg.substring(msg.lastIndexOf(' ') + 1))
@@ -46,14 +60,6 @@
         console.log('disconnected!');
     });
 
-    function send() {
-        let msg = $('#msg').val();
-        
-        socket.emit('message', {room: joinedRoom, msg: msg}, function(ret) {
-            // 서버에게 함수를 알려준다.
-            console.log(`message.collback ${ret}`);
-        });
-    }
 
     //-----------------------------------------------------
     function joinRoom() {
