@@ -67,6 +67,10 @@ io.sockets.on('connection', (socket, opt) => {
         // emit(이벤트, 정보);
         socket.broadcast.to(data.room).emit('message', {room: data.room, msg: data.msg});
     });
+
+    socket.on('messageOne', (socketId, msg, fn) => {
+        socket.to(socketId).emit('message', {msg: msg});
+    });
     
     // 소켓 끊기 roomId, fn 없을것.
     socket.on('disconnecting', (data) => {

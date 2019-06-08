@@ -83,5 +83,12 @@
             displayRooms();
         });
     }
+
+    // 귓속말
+    function sendOne() {
+        if (socketId) {
+            socket.emit('messageOne', socketId, $('귓속말').val());
+        }
+    }
     //------------------------------------------------
 </script>
