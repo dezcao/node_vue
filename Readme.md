@@ -89,6 +89,8 @@ visual studio code 세팅 변경
 
 git 설치
     https://git-scm.com/download/win
+    git config --global user.name dezcao
+    git config --global user.email dezcao@naver.com
     git clone https://github.com/dezcao/nodevue.git
     {{
         git init
