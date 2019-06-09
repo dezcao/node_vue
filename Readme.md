@@ -72,17 +72,8 @@ node index.js
 커서의 라인삭제 : ctrl + X
 ```
 
-
-### 현재 진행정도
-```sh
-https://www.youtube.com/watch?v=aBMzgzcvwIA&list=PLEOnZ6GeucBX5H60GtICsoDs9LaFQVDPz&index=2
-여기부터 강의 보면되고,
-git, visual basic code 설치 후에
-git pull 하고나서 npm install 한방이면 된다.
-git clone https://github.com/dezcao/nodevue.git
-```
-
 ### 세팅순서
+```sh
 visual studio code 설치 
     https://code.visualstudio.com/docs/?dv=win
 
@@ -108,3 +99,4 @@ node.js 설치
     https://nodejs.org/ko/
     커멘트창 다시 시작해야 한다.(노드가 나중에 설치되었기 때문)
     npm install
+```
