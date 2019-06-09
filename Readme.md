@@ -1,4 +1,4 @@
-### Basic
+### Node.js
 ```sh
 모듈을 제공하는 쪽은 export
 받는 쪽은 require로 받는다.
@@ -62,8 +62,9 @@ git : 리눅스 상에서 가장 빠른 속도, 인터넷 연결이 없을 때�
 ```
 
 ### 프로그램 실행해 보기
+```sh
 node index.js
-
+```
 
 ### visual studio code 단축키
 ```sh
@@ -71,17 +72,8 @@ node index.js
 커서의 라인삭제 : ctrl + X
 ```
 
-
-### 현재 진행정도
-```sh
-https://www.youtube.com/watch?v=aBMzgzcvwIA&list=PLEOnZ6GeucBX5H60GtICsoDs9LaFQVDPz&index=2
-여기부터 강의 보면되고,
-git, visual basic code 설치 후에
-git pull 하고나서 npm install 한방이면 된다.
-git clone https://github.com/dezcao/nodevue.git
-```
-
 ### 세팅순서
+```sh
 visual studio code 설치 
     https://code.visualstudio.com/docs/?dv=win
 
@@ -89,21 +81,18 @@ visual studio code 설치
 visual studio code 세팅 변경
     view > toggle render whitespace
 
-
-프로젝트 가져올 폴더 만들기
+node.js 설치
+    https://nodejs.org/ko/
+    
+git 프로젝트 가져올 폴더 만들기
 
 git 설치
     https://git-scm.com/download/win
+    git init
     git config --global user.name dezcao
     git config --global user.email dezcao@naver.com
     git clone https://github.com/dezcao/nodevue.git
-    {{
-        git init
-        git config --global user.name dezcao
-        git config --global user.email dezcao@naver.com
-    }}
 
-node.js 설치
-    https://nodejs.org/ko/
-    커멘트창 다시 시작해야 한다.(노드가 나중에 설치되었기 때문)
-    npm install
+최초 가져왔으면 프로젝트에 필요한 의존 모듈들을 받는다.
+npm install
+```
