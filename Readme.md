@@ -1,4 +1,4 @@
-### Basic
+### Node.js
 ```sh
 모듈을 제공하는 쪽은 export
 받는 쪽은 require로 받는다.
