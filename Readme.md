@@ -81,22 +81,18 @@ visual studio code 설치
 visual studio code 세팅 변경
     view > toggle render whitespace
 
-
-프로젝트 가져올 폴더 만들기
+node.js 설치
+    https://nodejs.org/ko/
+    
+git 프로젝트 가져올 폴더 만들기
 
 git 설치
     https://git-scm.com/download/win
+    git init
     git config --global user.name dezcao
     git config --global user.email dezcao@naver.com
     git clone https://github.com/dezcao/nodevue.git
-    {{
-        git init
-        git config --global user.name dezcao
-        git config --global user.email dezcao@naver.com
-    }}
 
-node.js 설치
-    https://nodejs.org/ko/
-    커멘트창 다시 시작해야 한다.(노드가 나중에 설치되었기 때문)
-    npm install
+최초 가져왔으면 프로젝트에 필요한 의존 모듈들을 받는다.
+npm install
 ```
