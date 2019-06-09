@@ -14,6 +14,11 @@ node.js는 파일시스템에 관해서 기본제공하는 라이브러리가 �
  npm i mysql
  npm i nodemon -g (개발중 자동 재시작 해줌.)
  npm i bluebird --save (connection pool, transaction, Kludgy)
+
+ 모듈들 제거 후 다시 깔때
+ rm -rf node_modules/
+ rm -rf dist
+ npm i
 ```
 
 ### 형상관리
